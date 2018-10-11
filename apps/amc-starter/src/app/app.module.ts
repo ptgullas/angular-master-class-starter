@@ -5,7 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactsMaterialModule } from './contacts-material.module';
 
 import { ContactsAppComponent } from './app.component';
-import { ContactsNgRxModule } from './contacts-ngrx.module';
+import { ContactsService } from './contacts.service';
 
 @NgModule({
   declarations: [ContactsAppComponent],
@@ -16,6 +16,7 @@ import { ContactsNgRxModule } from './contacts-ngrx.module';
     ContactsNgRxModule,
     FlexLayoutModule
   ],
+  providers: [ContactsService],
   bootstrap: [ContactsAppComponent]
 })
 export class ContactsModule {}
