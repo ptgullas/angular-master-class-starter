@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { ContactsMaterialModule } from './contacts-material.module';
 
@@ -11,6 +12,7 @@ import { ContactsAppComponent } from './app.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactsNgRxModule } from './contacts-ngrx.module';
 import { ContactsDetailComponent } from './contacts-detail/contacts-detail.component';
+import { ContactsEditorComponent } from './contacts-editor/contacts-editor.component';
 
 import { ContactsService } from './contacts.service';
 
@@ -21,7 +23,8 @@ import { API_ENDPOINT } from './app.tokens';
   declarations: [
     ContactsAppComponent,
     ContactsListComponent,
-    ContactsDetailComponent
+    ContactsDetailComponent,
+    ContactsEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { API_ENDPOINT } from './app.tokens';
     ContactsNgRxModule,
     FlexLayoutModule,
     RouterModule.forRoot(APP_ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ContactsService,
