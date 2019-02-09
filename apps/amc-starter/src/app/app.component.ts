@@ -26,4 +26,7 @@ export class ContactsAppComponent {
       country: 'United States'
     }
   } */
+  trackContact(index, contact: Contact) {
+    return contact? contact.id : undefined;
+  }
 }
