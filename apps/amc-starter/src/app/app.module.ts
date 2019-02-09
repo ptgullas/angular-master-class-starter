@@ -6,6 +6,7 @@ import { ContactsMaterialModule } from './contacts-material.module';
 
 import { ContactsAppComponent } from './app.component';
 import { ContactsNgRxModule } from './contacts-ngrx.module';
+import { ContactsService } from './contacts.service';
 
 @NgModule({
   declarations: [ContactsAppComponent],
@@ -15,6 +16,9 @@ import { ContactsNgRxModule } from './contacts-ngrx.module';
     ContactsMaterialModule,
     ContactsNgRxModule,
     FlexLayoutModule
+  ],
+  providers : [
+    ContactsService,
   ],
   bootstrap: [ContactsAppComponent]
 })
