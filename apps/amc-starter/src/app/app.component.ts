@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from '../app/models/contact';
-import { CONTACT_DATA } from '../app/data/contact-data';
-import { ContactsService } from './contacts.service';
 
 @Component({
   selector: 'trm-contacts-app',
@@ -12,13 +9,11 @@ import { ContactsService } from './contacts.service';
 export class ContactsAppComponent implements OnInit {
 
   title = 'Angular Master Class';
-  contacts: Contact[];
 
-  constructor(private contactsService: ContactsService) {
+  constructor() {
   }
   
   ngOnInit() {
-    this.contacts = this.contactsService.getContacts();
   }
 
 /*   contact: Contact = {
@@ -36,7 +31,4 @@ export class ContactsAppComponent implements OnInit {
       country: 'United States'
     }
   } */
-  trackContact(index, contact: Contact) {
-    return contact? contact.id : undefined;
-  }
 }
